@@ -21,6 +21,9 @@ RUN chmod a+x /entrypoint.sh
 COPY configure-backup-rotate.sh /configure-backup-rotate.sh
 RUN chmod a+x /configure-backup-rotate.sh
 
+COPY cron-logrotate.sh /etc/periodic/daily/logrotate
+RUN chmod a+x /etc/periodic/daily/logrotate
+
 EXPOSE 3306
 
 ENTRYPOINT ["/entrypoint.sh"]

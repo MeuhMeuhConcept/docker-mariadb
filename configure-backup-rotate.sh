@@ -41,3 +41,9 @@ EOF
 
     logrotate -vf $LOGROTATE_FILE
 fi
+
+crond_running=$(ps aux | grep crond | wc -l)
+if [ $crond_running == 1 ]; then
+    echo "crond is not running, we start it"
+    crond
+fi
