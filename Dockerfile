@@ -4,8 +4,8 @@ MAINTAINER jn.germon@gmail.com
 
 RUN apk update && \
     apk add \
-        mariadb=10.1.26-r0 \
-        mariadb-client=10.1.26-r0 \
+        mariadb=10.1.40-r0 \
+        mariadb-client=10.1.40-r0 \
         logrotate \
         pwgen \
     && rm -rf /var/cache/apk/*

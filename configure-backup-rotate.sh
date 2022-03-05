@@ -33,7 +33,7 @@ $BACKUP_FILE {
     nocompress
     create 640 root root
     postrotate
-        mysqldump -u root $MYSQL_DATABASE > $DUMP_FILE
+        mysqldump -u root $MYSQL_DATABASE -p\$MYSQL_ROOT_PASSWORD > $DUMP_FILE
         gzip -9f $DUMP_FILE
     endscript
 }
